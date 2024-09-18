@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:latest'
-            args '-v /root/.m2:/root/.m2'
+             args '-v /var/lib/jenkins/.m2:/root/.m2' // Mount Jenkins .m2 to container .m2
         }
     }
     stages {
